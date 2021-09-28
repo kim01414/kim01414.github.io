@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Software] SNR Mapper"
-date: 2021-09-28 12:00:00 +0900
+date: 2021-09-27 12:00:00 +0900
 image: 12.jpg
 tags: [python, SNR]
 categories: MRI
