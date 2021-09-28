@@ -1,0 +1,11 @@
+---
+layout: post
+title: "[Theory] Basic principles of MRI"
+date: 2021-09-26 11:00:00 +0900
+image: 12.jpg
+tags: [python, MRI]
+categories: MRI
+---
+# Under construction
+## 1. Spin
+## 2. Resonance

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "[Software] T1 & T2 Mapper"
+date: 2021-09-27 13:00:00 +0900
+image: 12.jpg
+tags: [python, Fitting]
+categories: MRI
+---
+T1_T2 Mapper is the software for generating T1 and T2 maps.
+
+![img](https://raw.githubusercontent.com/kim01414/T1_T2_Mapper/main/readme/img1.png)
+
+Check out the [T1&T2 Mapper][github] for more information. 
+
+[github]: https://github.com/kim01414/T1_T2_Mapper
