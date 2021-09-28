@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Theorem] fMRI"
-date: 2021-09-28 14:46:00 +0900
+date: 2021-09-28 15:46:00 +0900
 image: 12.jpg
 tags: [MRI fMRI EPI]
 categories: MRI
