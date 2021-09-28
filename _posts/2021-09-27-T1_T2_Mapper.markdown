@@ -1,15 +1,16 @@
 ---
 layout: post
-title: "[Software] T1 & T2 Mapper"
-date: 2021-09-27 13:30:00 +0900
+title: "[프로그래밍] T1 & T2 Mapper"
+date: 2021-09-27 12:30:00 +0900
 image: 2.jpg
 tags: [python, Fitting]
 categories: MRI
 ---
-T1_T2 Mapper is the software for generating T1 and T2 maps.
+* T1_T2 Mapper는 T1영상과 T2영상에 대해 각각 T1map과 T2map을 생성할 수 있는 프로그램입니다.  
+* IR(Inversion Recovery) 방식을 지원합니다.
 
 ![img](https://raw.githubusercontent.com/kim01414/T1_T2_Mapper/main/readme/img1.png)
 
-Check out the [T1&T2 Mapper][github] for more information. 
-g
+[T1&T2 Mapper][github]에서 코드와 상세한 정보를 확인할 수 있습니다.
+
 [github]: https://github.com/kim01414/T1_T2_Mapper
