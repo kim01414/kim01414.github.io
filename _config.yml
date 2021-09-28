@@ -1,6 +1,6 @@
 title: KYH's Workspace
 description: Description
-baseurl: "/kim01414.github.io/" # the subpath of your site, e.g. /blog
+baseurl: "/kim01414/" # the subpath of your site, e.g. /blog
 url: "https://kim01414.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author
