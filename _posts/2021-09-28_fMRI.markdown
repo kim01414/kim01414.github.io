@@ -7,7 +7,7 @@ tags: [MRI fMRI EPI]
 categories: MRI
 ---
 
-<h1> fMRI의 원리와 활용 </h1>  
+<h1> fMRI의 원리와 방법</h1>  
 
 ## 1. Introduction
   * 혈액 속에 있는 적혈구에는 헤모글로빈(hemoglobin)이 있으며 이를 통해 산소(oxygen)가 우리 몸의 여러 기관으로 전달된다.
