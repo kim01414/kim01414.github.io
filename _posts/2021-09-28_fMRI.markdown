@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "[Theorem] fMRI"
-date: 2021-09-28 14:46:00 +0900
+date: 2021-09-28 15:46:00 +0900
 image: 12.jpg
 tags: [MRI fMRI EPI]
 categories: MRI
 ---
 
-<h1> fMRI의 원리와 활용 </h1>  
+<h1> fMRI의 원리와 방법</h1>  
 
 ## 1. Introduction
   * 혈액 속에 있는 적혈구에는 헤모글로빈(hemoglobin)이 있으며 이를 통해 산소(oxygen)가 우리 몸의 여러 기관으로 전달된다.
