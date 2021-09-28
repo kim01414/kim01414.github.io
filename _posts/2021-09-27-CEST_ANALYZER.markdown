@@ -2,7 +2,7 @@
 layout: post
 title: "[Software] CEST Analyzer"
 date: 2021-09-26 12:00:00 +0900
-image: 12.jpg
+image: 2.jpg
 tags: [python, CEST]
 categories: MRI
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[Software] T1 & T2 Mapper"
 date: 2021-09-27 13:30:00 +0900
-image: 12.jpg
+image: 2.jpg
 tags: [python, Fitting]
 categories: MRI
 ---
