@@ -6,3 +6,59 @@ image: 12.jpg
 tags: [MRI fMRI EPI]
 categories: MRI
 ---
+
+<h1> fMRI의 원리와 활용 </h1>
+---
+## 1. Introduction
+  * 혈액 속에 있는 적혈구에는 헤모글로빈(hemoglobin)이 있으며 이를 통해 산소(oxygen)가 우리 몸의 여러 기관으로 전달된다.
+  
+  * 헤모글로빈에 산소가 결합되어 있는 oxygenated hemoglobin(oxyHb)은 자기적으로 반자성(diamagnetic)의 성질을 가지며  
+    반대로 산소가 결합되지 않은 deoxygenated hemoglobin(deoxyHb)은 상자성(paramagnetic)의 성질을 가지게 된다.
+  
+  * deoyHb의 상자성 성질에 의해 local magnetic field를 생성하게 되고, 이에 따라 주변부에는 dephasing 현상이 발생하게 되어 영상에 영향을 주게 된다.
+  
+  * 이러한 원리를 이용하여 뇌의 활동을 실시간으로 촬영하는 MR영상 기법을 fMRI(functional magnetic resonance imaging)이라 한다.
+
+
+---
+
+
+## 2. Blood flow of our brain
+  * 혈액 속에 있는 적혈구에는 헤모글로빈(hemoglobin)이 있으며 이를 통해 산소(oxygen)가 우리 몸의 여러 기관으로 전달된다.
+
+  * 뇌의 특정 영역의 활동이 늘어나게 되면 산소 소모량이 커지게 되며, 해당 영역에는 $CO_{2}$의 양과 deoxyHb의 비율이 높아지게 된다.
+
+  * 2~6초 정도의 시간이 지나면 해당 영역에 대한 혈액의 양(cerebral blood flow, CBF)이 크게 증가하면서 oxyHb의 비율이 높아지게 된다.  
+
+---
+
+## 3. EPI (Echo Planar Imaging)
+  * 임상에서 해부학적(anatomy) 영상을 촬영하는 경우 병변의 진단을 위해 높은 공간해상도(spatial resolution)가 요구된다. 이에 따라 촬영 시간이 긴 편이며  
+    뇌 영상을 기준으로 할때 T1강조영상을 기준으로 하나의 볼륨을 얻는데 대략 4분의 시간이 소요된다 (물론, 시퀀스에 따라 달라질 수 있다.).
+  
+  * 뇌의 활동을 실시간으로 보기 위해서는 빠르게 촬영해야 한다. 즉, 높은 시간해상도(time resolution)가 요구되며 하나의 볼륨을 얻는데 대략 2초 정도 소요된다.  
+    이때 영상의 공간해상도는 해부학적 영상에 비해 매우 떨어지지만 (예: 256x256 vs 64x64), oxyHb와 deoxyHb에 따른 영역별 활동을 보는데에는 크게 지장이 없다.
+  
+  * 하지만 susceptibility artifact에 매우 민감하다는 단점이 있다.
+---
+
+## 4. Task based fMRI
+  * MR촬영을 하는 동안 피험자에게 특정 과제를 수행하도록 하거나, 시각이나 청각과 같은 자극을 주게 된다. 
+  
+  * 분석자는 
+
+---
+
+## 5. Resting State fMRI
+  * ㅇㅇ
+
+---
+
+## 6. fMRI 분석 프로그램
+  * SPM (Statistical Parametric Mapping) - [Link](https://www.fil.ion.ucl.ac.uk/spm/)
+  * FSL - [Link](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki)
+  * FreeSurfer - [Link](https://surfer.nmr.mgh.harvard.edu/)
+
+---
+## References
+[Radiopaedia](https://radiopaedia.org/articles/bold-imaging) - BOLD imaging
