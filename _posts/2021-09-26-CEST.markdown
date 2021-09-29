@@ -8,12 +8,16 @@ categories: MRI
 ---
 
 ## 1. Introduction
-  * MRI촬영으로 직접 검출하기에는 그 신호 세기가 너무 작거나 양이 적은 물질들이 존재한다.
+  * MRI촬영으로 직접 검출하기에는 그 신호 세기가 너무 작거나 양이 적은 물질들이 존재한다. 
   
   * 물이 상대적으로 신호가 세고 양이 풍부하다는 점을 이용하여 타깃 물질을 간접적으로 검출하는 방법이 개발되었다.
 
+  ![sample]('./../figures/CEST/samples.jpg)  
+  🔺물과 몇몇 용액들을 튜브에 담고 찍은 영상. 이 영상에서 타깃 물질은 무엇일까?
+
+---
 ## 2. Magnetization Transfer (MT)
-  * 보통 두 개의 풀(pool)을 규정하는데, 하나는 bound pool(macromolecular)이고 다른 하나는 bulk water pool(물)이다. 각각 고유의 이완율을 가지며  
+  * 보통 두 개의 풀(pool)을 규정하는데, 하나는 bound pool(macromolecular)이고 다른 하나는 free water pool(물)이다. 각각 고유의 이완율을 가지며  
     bound pool의 경우 broad한 RF pulse 영역대를 가진다.
   
   * Off-resonance RF saturation 펄스를 이용하여 macromolecular의 스핀을 선택적으로 excite시키면, 스핀-스핀 상호작용(spin-spin interaction)이나  
@@ -22,13 +26,37 @@ categories: MRI
   * 위의 현상에 따른 변화를 감지하여 물질을 검출하는 것이 MT의 원리가 된다.
   
   * Saturation pre-pulse를 사용하면 물도 직접적으로 일부 saturated되는 DWS(direct water saturation)가 항상 발생한다.
-  
+  ![MT](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-030-48419-4_18/MediaObjects/454285_1_En_18_Fig1_HTML.jpg)
+  🔺1) Off-resonance RF pulse를 인가하면 2) free water와 macromolecules간에 MT현상이 일어나게 되어 3) 물의 신호가 일부 감소하게 된다.   
+  ([Figure출처](https://link.springer.com/chapter/10.1007/978-3-030-48419-4_18))
+---  
 ## 3. Chemical Exchange Saturation Transfer
   * 위에서 언급했듯이 MT의 한 종류로, chemical exchange를 이용하여 간적적으로 물질을 검출하는 방식이다.
   
   * MT의 경우와는 달리 검출하고자하는 물질의 pool은 broad하지 않고 좁은 RF pulse 영역대를 가지며, asymmetric한 분포를 가진다.
 
+  * CEST기법으로 촬영할 때는 보통 0ppm 기준으로 대칭의 형태로 RF pulse를 가한다. (예: 6ppm~-6ppm)
 
+  * 각 ppm에서 intensity를 측정하고 이 중 가장 높은 intensity인 $I_{0}$로 나눈 뒤에 Z-Spectrum이라는 형태로 변환한다.  
+
+    $Z_{(△_{RF})} = 1 - I_{(△_{RF})}/I_{0}$  
+
+  
+  ![Zspec](https://europepmc.org/articles/PMC3602140/bin/nihms-427344-f0001.jpg)  
+  🔺(a) pool A와 pool B간의 chemical exchange (b) pool B에 해당하는 RF pulse를 가하면 pool A와 chemical exchange가 일어나면서 pool A의 신호가 감소한다.  
+  (c) Z-spectrum과 MTR 그래프 ([Figure출처](https://europepmc.org/article/med/23273841))
+
+  * Z-spectrum을 보면, 물에 해당하는 0ppm에서는 신호의 세기가 매우 약하며 pool B에 해당하는 RF영역에서 신호의 세기가 일부 감소한 것을 확인할 수 있다.
+
+  * Z-spectrum이 비대칭인 점을 이용하여 (-)쪽의 신호 세기에서 (+)쪽의 신호 세기를 빼주면 (+)쪽의 MTR 곡선을 그릴 수 있다. (참고로 왼쪽이 +)
+
+    $MTR_{asym}(△_{RF}) = Z(-△_{RF}) - Z(△_{RF})$
+
+  ![MTR]('./../figures/CEST/MTR.png)  
+  🔺6ppm에서의 $MTR_{asym}$ map영상을 출력한 모습. 가운데 빨간 원이 타깃 물질로, 6ppm에서 다른 물질에 비해 높은 $MTR_{asym}$값을 가진다.  
+  타깃 물질을 검출하려면 타깃 물질의 RF pulse 영역에서 $MTR_{asym}$영상을 얻으면 된다.
+
+---
 ## 4. Correction Methods
   * MRI는 B0 자기장 영역이 매번 불균일(inhomogeneity)하다. 때문에 Z-spectrum 그래프에서 최저점이 물에 해당하는 0ppm에서 벗어나있는 경우가 빈번하다. 
   
@@ -42,7 +70,11 @@ categories: MRI
   Lorentzian correction | Lorentz 함수에 Z-spectrum을 fitting하여 offset을 계산해서 보정하는 방식 
   IDE-LF                | K-means 군집화로 비슷한 Z-spectrum의 픽셀들을 묶고 Lorentizan fitting으로 평균 offset를 구한뒤 보정하는 과정을 반복
   WASSR                 | DWS 영상을 촬영하고 이를 reference로 하여 offset을 보정하는 방식
- 
-  
 
+  ![B0map]('./../figures/CEST/B0map.png)  
+  🔺Spline correction으로 보정하면서 얻은 B0 offset map.
+ 
 ## References
+[1] Schurr, R.. “Z-Spectral Modeling for Magnetization Transfer Ratio Asymmetry Calculations in Chemical Exchange Saturation Transfer MRI at 3 Tesla.” (2015).
+
+[2] Yao J, Ruan D, Raymond C, et al. Improving B0 Correction for pH-Weighted Amine Proton Chemical Exchange Saturation Transfer (CEST) Imaging   by Use of k-Means Clustering and Lorentzian Estimation. Tomography. 2018;4(3):123-137. doi:10.18383/j.tom.2018.00017
