@@ -12,7 +12,7 @@ categories: MRI
   
   * 물이 상대적으로 신호가 세고 양이 풍부하다는 점을 이용하여 타깃 물질을 간접적으로 검출하는 방법이 개발되었다.
 
-  ![sample]('./../figures/CEST/samples.jpg)  
+  ![sample](https://github.com/kim01414/kim01414.github.io/blob/master/_posts/figures/CEST/samples.jpg)  
   🔺물과 몇몇 용액들을 튜브에 담고 찍은 영상. 이 영상에서 타깃 물질은 무엇일까?
 
 ---
@@ -37,9 +37,9 @@ categories: MRI
 
   * CEST기법으로 촬영할 때는 보통 0ppm 기준으로 대칭의 형태로 RF pulse를 가한다. (예: 6ppm~-6ppm)
 
-  * 각 ppm에서 intensity를 측정하고 이 중 가장 높은 intensity인 $I_{0}$로 나눈 뒤에 Z-Spectrum이라는 형태로 변환한다.  
+  * 각 ppm에서 intensity를 측정하고 이 중 가장 높은 intensity인 <img src="https://render.githubusercontent.com/render/math?math=I_{0}">로 나눈 뒤에 Z-Spectrum이라는 형태로 변환한다.  
 
-    $Z_{(△_{RF})} = 1 - I_{(△_{RF})}/I_{0}$  
+   <img src="https://render.githubusercontent.com/render/math?math=\Large Z(w_{RF}) = 1 - I(w_{RF})/I_{0}">
 
   
   ![Zspec](https://europepmc.org/articles/PMC3602140/bin/nihms-427344-f0001.jpg)  
@@ -50,11 +50,11 @@ categories: MRI
 
   * Z-spectrum이 비대칭인 점을 이용하여 (-)쪽의 신호 세기에서 (+)쪽의 신호 세기를 빼주면 (+)쪽의 MTR 곡선을 그릴 수 있다. (참고로 왼쪽이 +)
 
-    $MTR_{asym}(△_{RF}) = Z(-△_{RF}) - Z(△_{RF})$
+ <img src="https://render.githubusercontent.com/render/math?math=\Large MTR_{asym}(w_{RF}) = Z(-w_{RF}) - Z(w_{RF})">
 
-  ![MTR]('./../figures/CEST/MTR.png)  
+  ![MTR](https://github.com/kim01414/kim01414.github.io/blob/master/_posts/figures/CEST/MTR.png)  
   🔺6ppm에서의 $MTR_{asym}$ map영상을 출력한 모습. 가운데 빨간 원이 타깃 물질로, 6ppm에서 다른 물질에 비해 높은 $MTR_{asym}$값을 가진다.  
-  타깃 물질을 검출하려면 타깃 물질의 RF pulse 영역에서 $MTR_{asym}$영상을 얻으면 된다.
+  타깃 물질을 검출하려면 타깃 물질의 RF pulse 영역에서 <img src="https://render.githubusercontent.com/render/math?math=\Large MTR_{asym}">영상을 얻으면 된다.
 
 ---
 ## 4. Correction Methods
@@ -71,7 +71,7 @@ categories: MRI
   IDE-LF                | K-means 군집화로 비슷한 Z-spectrum의 픽셀들을 묶고 Lorentizan fitting으로 평균 offset를 구한뒤 보정하는 과정을 반복
   WASSR                 | DWS 영상을 촬영하고 이를 reference로 하여 offset을 보정하는 방식
 
-  ![B0map]('./../figures/CEST/B0map.png)  
+  ![B0map](https://github.com/kim01414/kim01414.github.io/blob/master/_posts/figures/CEST/B0map.png)  
   🔺Spline correction으로 보정하면서 얻은 B0 offset map.
  
 ## References
