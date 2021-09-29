@@ -29,7 +29,7 @@ categories: MRI
   ![MT](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-030-48419-4_18/MediaObjects/454285_1_En_18_Fig1_HTML.jpg)
   🔺1) Off-resonance RF pulse를 인가하면 2) free water와 macromolecules간에 MT현상이 일어나게 되어 3) 물의 신호가 일부 감소하게 된다.   
   ([Figure출처](https://link.springer.com/chapter/10.1007/978-3-030-48419-4_18))
----  
+--  
 ## 3. Chemical Exchange Saturation Transfer
   * 위에서 언급했듯이 MT의 한 종류로, chemical exchange를 이용하여 간적적으로 물질을 검출하는 방식이다.
   
