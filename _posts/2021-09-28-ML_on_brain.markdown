@@ -1,0 +1,48 @@
+---
+layout: post
+title: "[Research] Deep learning on brain"
+date: 2021-09-26 13:00:00 +0900
+image: 12.jpg
+tags: [AI, MRI, fMRI]
+categories: MRI
+---
+
+## 1. Introduction
+  * MRI촬영으로 직접 검출하기에는 그 신호 세기가 너무 작거나 양이 적은 물질들이 존재한다.
+  
+  * 물이 상대적으로 신호가 세고 양이 풍부하다는 점을 이용하여 타깃 물질을 간접적으로 검출하는 방법이 개발되었다.
+
+## 2. Magnetization Transfer (MT)
+  * 보통 두 개의 풀(pool)을 규정하는데, 하나는 bound pool(macromolecular)이고 다른 하나는 bulk water pool(물)이다. 각각 고유의 이완율을 가지며  
+    bound pool의 경우 broad한 RF pulse 영역대를 가진다.
+  
+  * Off-resonance RF saturation 펄스를 이용하여 macromolecular의 스핀을 선택적으로 excite시키면, 스핀-스핀 상호작용(spin-spin interaction)이나  
+  직접적인 proton의 chemical exchange를 통해 magnetization이 물의 proton으로 전달된다. 
+
+  * 위의 현상에 따른 변화를 감지하여 물질을 검출하는 것이 MT의 원리가 된다.
+  
+  * Saturation pre-pulse를 사용하면 물도 직접적으로 일부 saturated되는 DWS(direct water saturation)가 항상 발생한다.
+  
+## 3. Chemical Exchange Saturation Transfer
+  * 위에서 언급했듯이 MT의 한 종류로, chemical exchange를 이용하여 간적적으로 물질을 검출하는 방식이다.
+  
+  * MT의 경우와는 달리 검출하고자하는 물질의 pool은 broad하지 않고 좁은 RF pulse 영역대를 가지며, asymmetric한 분포를 가진다.
+
+
+## 4. Correction Methods
+  * MRI는 B0 자기장 영역이 매번 불균일(inhomogeneity)하다. 때문에 Z-spectrum 그래프에서 최저점이 물에 해당하는 0ppm에서 벗어나있는 경우가 빈번하다. 
+  
+  * 이러한 차이(offset)가 있으면 정확한 분석결과(예: MTR 등)를 얻지 못하기 때문에 후보정 작업이 반드시 필요하다.
+
+  * 후보정 작업은 다음과 같은 방법들로 가능하다.
+
+  Method | Principle 
+  :----- | :------: 
+  Spline correction     | Spline fitting을 이용하여 Z-spectrum의 offset을 계산해서 보정하는 방식
+  Lorentzian correction | Lorentz 함수에 Z-spectrum을 fitting하여 offset을 계산해서 보정하는 방식 
+  IDE-LF                | K-means 군집화로 비슷한 Z-spectrum의 픽셀들을 묶고 Lorentizan fitting으로 평균 offset를 구한뒤 보정하는 과정을 반복
+  WASSR                 | DWS 영상을 촬영하고 이를 reference로 하여 offset을 보정하는 방식
+ 
+  
+
+## References

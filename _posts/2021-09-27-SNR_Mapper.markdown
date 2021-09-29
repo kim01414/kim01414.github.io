@@ -11,6 +11,6 @@ SNR Mapper는 SNR mapping을 수행할 수 있는 프로그램입니다.
 
 ![img](https://raw.githubusercontent.com/kim01414/SNR_Mapper/main/readme/s1.png)
 
-Check out the [SNR_Mapper][github] for more information. 
+[SNR_Mapper][github]에서 코드와 상세한 정보를 확인할 수 있습니다. 
 
 [github]: https://github.com/kim01414/SNR_Mapper
